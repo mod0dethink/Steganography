@@ -8,7 +8,7 @@ public class Steganography {
         BufferedImage image = ImageProcessor.loadImage(imagePath);
 
         // 埋め込むファイルを読み込む
-        byte[] fileContent = FileHandler.readFile(filePath);
+        byte[] fileContent = Main.readFile(filePath);
 
         // ファイルの内容を画像に埋め込む
         BufferedImage resultImage = ImageProcessor.embedDataIntoImage(image, fileContent);
@@ -18,3 +18,4 @@ public class Steganography {
     }
 
 }
+
